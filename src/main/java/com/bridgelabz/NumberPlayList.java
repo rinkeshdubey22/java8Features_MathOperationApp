@@ -75,7 +75,7 @@ public class NumberPlayList {
         List<Double> streamList = myNumberList.stream()
                                   .map(toDoubleFunction)
                                   .collect(Collectors.toList());
-        System.out.println("mth9: Printing Double List:" + streamList);
+        System.out.println("mth9: Store the Transform Double Value into a new List:" + streamList);
 
     }
 
