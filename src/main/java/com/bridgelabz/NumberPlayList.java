@@ -64,6 +64,11 @@ public class NumberPlayList {
             System.out.println(("Mth7: forEach Lambda impl Value::" + isEvenFunction.test(n)));
         });
 
+        //Method 8: Processing the stream
+        myNumberList.stream().forEach(n -> {
+            System.out.println("Mth8: Stream for each value:" + n);
+        });
+
     }
 
 }
