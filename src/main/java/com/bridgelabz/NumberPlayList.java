@@ -13,7 +13,7 @@ public class NumberPlayList {
     public static void main(String[] args) {
         List<Integer> myNumberList = new ArrayList<Integer>();
         for (int i = 0; i < 5; i++) {
-            myNumberList.add(1);
+            myNumberList.add(i);
         }
 
         //Method1: Traversing using Iterator
@@ -77,6 +77,14 @@ public class NumberPlayList {
                                   .map(toDoubleFunction)
                                   .collect(Collectors.toList());
         System.out.println("mth9: Printing Double List:" + streamList);
+
+        //Method 10: Listing the first even
+        Integer first = myNumberList.stream()
+                        .filter(isEvenFunction)
+                        .peek(n -> System.out.println("Peak Even Number: " +n))
+                        .findFirst()
+                        .orElse(null);
+        System.out.println("Mth10: First Even: " + first);
 
     }
 
