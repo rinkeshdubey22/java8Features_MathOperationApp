@@ -112,6 +112,11 @@ public class NumberPlayList {
         boolean noneMultOfSix = myNumberList.stream().noneMatch(i -> i > 0 && i % 6 ==0);
         System.out.println("allEven: "+allEven + " oneEven: " +oneEven + " noneMultOfSix: " + noneMultOfSix);
 
+        //Method 15: Sort the number in Ascending order
+        List<Integer> sortedList = myNumberList.stream()
+                                   .sorted((n1, n2) -> n2.compareTo(n1))
+                                    .collect(Collectors.toList());
+        System.out.println("Mth15: Sorted List in Ascending Order: " + sortedList);
     }
 
 }
