@@ -100,6 +100,12 @@ public class NumberPlayList {
                         .orElse(null);
         System.out.println("Mth12: Max Even:" + max);
 
+        //Method 13: Sum, Count, Average of Number
+        Integer sum = myNumberList.stream()
+                      .reduce(0,Integer::sum);
+        long count = myNumberList.stream().count();
+        System.out.println("Mth13: Avg of " + sum + "/" + count + " = " + sum/count);
+
     }
 
 }
